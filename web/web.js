@@ -4,8 +4,8 @@ let app = express();
 
 app.get('/', (req, res) => {
 	let opt = {
-		host: process.env.API_HOST,
-		port: process.env.API_PORT
+		host: 'localhost',
+		port: 4000
 	};
 	http.request(opt, (api) => {
 		api.on('data', (chunk) => {
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 	}).end();
 });
 
-const PORT = process.env.PORT;
+const PORT = 3000;
 
 app.listen(PORT, () => {
 	console.log(`http://localhost:${PORT}`);
