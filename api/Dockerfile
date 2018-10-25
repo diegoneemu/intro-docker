@@ -1,4 +1,4 @@
-<br /># Dockerfile api
+# Dockerfile api
 
 # Nome da imagem (será baixada na primeira execução)
 FROM node:10.11.0 
